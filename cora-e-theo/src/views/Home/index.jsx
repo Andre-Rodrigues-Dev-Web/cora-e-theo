@@ -12,7 +12,7 @@ const Home = () => {
     <ContentHome>
       <Seo
         titleSite="Seja bem-vindo ao site Cora & Theo"
-        descriptionSite="Confira nossa história, agenda de shows, músicas e muito mais."
+        descriptionSite="Bem vindo ao nosso site! Confira nossa história, agenda de shows, músicas e muito mais."
         imageSite="https://coraetheo.com.br/logo512.png"
         urlSite="https://coraetheo.com.br"
       />

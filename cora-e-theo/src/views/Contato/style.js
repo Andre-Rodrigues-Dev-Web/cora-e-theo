@@ -18,8 +18,8 @@ export const ContactContainer = styled.div`
 `;
 
 // Título da seção
-export const Title = styled.h1`
-  font-size: 2.5rem;
+export const Title = styled.h2`
+  font-size: 60px;
   margin-bottom: 20px;
 
   @media (max-width: 768px) {
@@ -29,7 +29,7 @@ export const Title = styled.h1`
 
 // Descrição textual
 export const Description = styled.p`
-  font-size: 1.2rem;
+  font-size: 30px;
   margin-bottom: 40px;
   max-width: 600px;
   line-height: 1.6;

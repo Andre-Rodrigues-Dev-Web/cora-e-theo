@@ -4,11 +4,14 @@ import Error from './views/Error'
 import SobreNos from './views/SobreNos'
 import Playlist from "./views/Playlist";
 import Contato from "./views/Contato";
+import GaleriaDeFotos from "./views/Galeria";
+
 export{
     Layout,
     Home,
     Error,
     SobreNos,
     Playlist,
-    Contato
+    Contato,
+    GaleriaDeFotos
 }

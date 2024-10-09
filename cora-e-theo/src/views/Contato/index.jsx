@@ -1,4 +1,5 @@
 import React from 'react';
+import Seo from "../../shared/components/Seo";
 import { ContactContainer, Title, Description, ContactButton, Icon } from './style';
 import { FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 
@@ -8,9 +9,15 @@ const Contact = () => {
 
   return (
     <ContactContainer>
+      <Seo
+        titleSite="Entre em contato para contratar o show de Cora e Theo"
+        descriptionSite=" Entre em contato conosco para informações sobre o show de Cora e Theo. Utilize um dos métodos abaixo para falar diretamente com o pai e empresário Ricardo Victor."
+        imageSite="https://coraetheo.com.br/logo512.png"
+        urlSite="https://coraetheo.com.br/contato"
+      />
       <Title>Entre em Contato</Title>
       <Description>
-        Entre em contato conosco para informações sobre o show de Cora e Theo. Utilize um dos métodos abaixo para falar diretamente com o empresário Ricardo Victor.
+        Entre em contato conosco para informações sobre o show de Cora e Theo. Utilize um dos métodos abaixo para falar diretamente com o pai e empresário Ricardo Victor.
       </Description>
       <ContactButton
         href={`https://wa.me/5531999999999?text=${encodeURIComponent(whatsappMessage)}`}

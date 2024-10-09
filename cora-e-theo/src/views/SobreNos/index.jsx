@@ -1,6 +1,7 @@
 import React from "react";
 import { Title, Paragraph, Image, WhatsappButton } from "./style";
 import { Container, Col, Row } from "../../shared/components/Grids/style";
+import Seo from "../../shared/components/Seo";
 //icons
 import { FaWhatsapp } from "react-icons/fa";
 // Imagens
@@ -12,6 +13,12 @@ const SobreNos = () => {
     <Container padding="4em">
       <Row>
         <Col width="50%">
+          <Seo
+            titleSite="Olá! Somos Cora e Theo, uma dupla de jovens irmãos que herdou de nossos pais a paixão pela música."
+            descriptionSite="Descubra a nossa história e veja como transformamos nossa paixão pela música em emocionantes shows ao vivo."
+            imageSite="https://coraetheo.com.br/logo512.png"
+            urlSite="https://coraetheo.com.br/sobre-nos"
+          />
           <Title>Conheça Cora e Theo</Title>
           <Paragraph>
             Olá! Nós somos Cora e Theo, dois irmãos apaixonados pela música e

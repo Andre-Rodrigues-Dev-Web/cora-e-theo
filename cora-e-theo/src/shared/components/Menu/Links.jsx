@@ -16,6 +16,9 @@ const Links = () => {
         <Link to={"/"}>Confira nossa agenda</Link>
       </li>
       <li>
+        <Link to={"/galeria-de-fotos"}>Galeria de Fotos</Link>
+      </li>
+      <li>
         <Link to={"/"}>Blog</Link>
       </li>
       <li>
