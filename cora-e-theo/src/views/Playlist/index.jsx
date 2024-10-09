@@ -27,6 +27,7 @@ import {
 
 import { tracks } from "./mock";
 import { Col, Container, Row } from "../../shared/components/Grids/style";
+import Seo from "../../shared/components/Seo";
 
 const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -121,6 +122,12 @@ const MusicPlayer = () => {
 
   return (
     <MusicPlayerContainer>
+      <Seo
+        titleSite="Ouça agora a playlist de Cora & Theo"
+        descriptionSite="Confira diversas musicas com as vozes de Cora e Theo, musicas de composições próprias e regravações de sucessos."
+        imageSite="https://coraetheo.com.br/logo512.png"
+        urlSite="https://coraetheo.com.br/playlist"
+      />
       <Container padding="7em 3em 2em 3em">
         <Row>
           <Col width="80%">
@@ -134,10 +141,11 @@ const MusicPlayer = () => {
               </p>
               <p>
                 Com um repertório que mistura hits contagiantes, baladas
-                emocionantes, modas sertanejas e musicas inéditas, a playlist de Cora e Theo foi criada
-                especialmente para quem gosta de viver a experiência completa da
-                nossa música. Quer dançar, cantar junto ou apenas relaxar? Esta
-                é playlist perfeita para você! Aumente o som e curta nossos sucessos.
+                emocionantes, modas sertanejas e musicas inéditas, a playlist de
+                Cora e Theo foi criada especialmente para quem gosta de viver a
+                experiência completa da nossa música. Quer dançar, cantar junto
+                ou apenas relaxar? Esta é playlist perfeita para você! Aumente o
+                som e curta nossos sucessos.
               </p>
             </TextContainer>
           </Col>
