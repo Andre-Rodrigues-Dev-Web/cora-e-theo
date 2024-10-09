@@ -45,7 +45,7 @@ const TextContainer = styled.div`
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   h2 {
     font-size: 26px;

@@ -197,6 +197,7 @@ export const Controls = styled.div`
 
     button {
       font-size: 22px;
+      margin: 0;
     }
 
     input[type="range"] {
