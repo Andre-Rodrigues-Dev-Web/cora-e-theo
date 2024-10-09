@@ -2,7 +2,6 @@ import React from "react";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import {
   FooterContainer,
-  FooterLinksContainer,
   FooterLink,
   SocialIconsContainer,
   SocialIcon,
@@ -12,24 +11,20 @@ import {
 const Footer = () => {
   return (
     <FooterContainer>
-      <div className="container mx-auto text-center"> {/* Adicionando text-center para centralizar o texto */}
+      <div className="container mx-auto text-center">
         <p>&copy; 2023 My Website. Todos os direitos reservados.</p>
-        <FooterLinksContainer>
-          <FooterLink to="/sobre" aria-label="Página Sobre">Sobre</FooterLink>
-          <FooterLink to="/contato" aria-label="Página de Contato">Contato</FooterLink>
-        </FooterLinksContainer>
-        <SocialIconsContainer aria-label="Links de redes sociais"> {/* Adicionando aria-label para descrever o grupo de ícones */}
-          <FooterLink to="/facebook" aria-label="Facebook">
+        <SocialIconsContainer aria-label="Links de redes sociais"> 
+          <FooterLink href="/facebook" target="_blank" aria-label="Facebook">
             <SocialIcon>
               <FaFacebook />
             </SocialIcon>
           </FooterLink>
-          <FooterLink to="/youtube" aria-label="Youtube">
+          <FooterLink href="/youtube" target="_blank" aria-label="Youtube">
             <SocialIcon>
               <FaYoutube />
             </SocialIcon>
           </FooterLink>
-          <FooterLink to="/instagram" aria-label="Instagram">
+          <FooterLink href="https://www.instagram.com/coraetheo/" target="_blank" aria-label="Instagram">
             <SocialIcon>
               <FaInstagram />
             </SocialIcon>

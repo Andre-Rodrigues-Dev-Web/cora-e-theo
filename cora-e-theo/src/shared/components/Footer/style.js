@@ -27,7 +27,7 @@ export const FooterLinksContainer = styled.div`
   }
 `;
 
-export const FooterLink = styled(Link)`
+export const FooterLink = styled.a`
   color: white;
   margin: 0 15px;
   text-decoration: none;
