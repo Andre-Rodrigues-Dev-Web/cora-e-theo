@@ -88,7 +88,7 @@ const ContainerMenu = styled.header`
           gap: 2rem;
           li {
             a {
-              font-size: 1em;
+              font-size: 0.92rem;
               font-weight: 600;
             }
           }
