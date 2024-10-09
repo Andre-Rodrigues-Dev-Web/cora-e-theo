@@ -10,6 +10,8 @@ const Home = () => {
       <Seo
         titleSite="Seja bem-vindo ao site Cora & Theo"
         descriptionSite="Confira nossa história, agenda de shows, músicas e muito mais."
+        imageSite="https://coraetheo.com.br/logo512.png"
+        urlSite="https://coraetheo.com.br"
       />
       <BannerHome />
       <SectionAbout>
