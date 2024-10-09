@@ -19,7 +19,7 @@ const Links = () => {
         <Link to={"/"}>Blog</Link>
       </li>
       <li>
-        <Link to={"/"}>Contato</Link>
+        <Link to={"/contato"}>Contato</Link>
       </li>
     </ul>
   );

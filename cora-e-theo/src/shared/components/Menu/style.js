@@ -24,6 +24,7 @@ const ContainerMenu = styled.header`
       button {
         background-color: transparent;
         border: none;
+        height: 40px;
         outline: none;
         width: 40px;
         &:before,
@@ -34,8 +35,9 @@ const ContainerMenu = styled.header`
           display: block;
           height: 6px;
           border-radius: 3px;
-          margin: 7px 0;
+          margin: 7px auto;
           transition: 0.5s;
+          width: 35px;
         }
         &:hover {
           &:after {

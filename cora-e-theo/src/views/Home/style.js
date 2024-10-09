@@ -85,7 +85,7 @@ const SectionAbout = styled.section`
       }
     }
     h2 {
-      font-size: 4em;
+      font-size: 3em;
       margin-bottom: 0.3em;
     }
     p {

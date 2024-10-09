@@ -33,8 +33,8 @@ const Home = () => {
                 musical com todo o coração.
               </p>
               <ul className="links-about">
-                <Link to='/'>Confira nossa história</Link>
-                <Link to='/'>Contrate-nos para seu evento</Link>
+                <Link to='/sobre-nos'>Confira nossa história</Link>
+                <Link to='/contato'>Contrate-nos para seu evento</Link>
               </ul>
             </Col>
             <Col width="50%">

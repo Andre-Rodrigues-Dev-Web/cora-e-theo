@@ -1,14 +1,18 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { ContainerMenu } from './style';
-import logoCoraeTheo from '../../assets/imgs/logo.png'
+import logoCoraeTheo from '../../assets/imgs/logo.png';
 import Links from './Links';
 import { Link } from 'react-router-dom';
 
 const Menu = () => {
     const [isMenuVisible, setIsMenuVisible] = useState(false);
+    const containerLinksRef = useRef(null); // Cria uma referência para a div interna
 
     const toggleMenu = () => {
         setIsMenuVisible(!isMenuVisible);
+        if (containerLinksRef.current && !isMenuVisible) {
+            containerLinksRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
     };
 
     return (
@@ -16,7 +20,7 @@ const Menu = () => {
             <div className="content-menu">
                 <div className="logo">
                     <Link>
-                        <img src={logoCoraeTheo} alt="Logo Cora e Theo" srcset={logoCoraeTheo} />
+                        <img src={logoCoraeTheo} alt="Logo Cora e Theo" srcSet={logoCoraeTheo} />
                     </Link>
                 </div>
                 <div className="button-responsive">
@@ -24,7 +28,10 @@ const Menu = () => {
                         <div></div>
                     </button>
                 </div>
-                <div className={`container-links ${isMenuVisible ? 'show' : ''}`}>
+                <div
+                    ref={containerLinksRef}
+                    className={`container-links ${isMenuVisible ? 'show' : ''}`}
+                >
                     <Links />
                 </div>
             </div>
