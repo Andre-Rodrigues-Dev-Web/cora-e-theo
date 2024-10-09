@@ -1,9 +1,12 @@
+import React from 'react';
 import BannerHome from "../../shared/components/BannerHome";
 import { ContentHome, SectionAbout } from "./style";
 import Seo from "../../shared/components/Seo";
 import { Col, Container, Row } from "../../shared/components/Grids/style";
 import { Link } from "react-router-dom";
-import imagemDupla from '../../shared/assets/imgs/a-dupla.png' 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import imagemDupla from '../../shared/assets/imgs/a-dupla.png'; 
+
 const Home = () => {
   return (
     <ContentHome>
@@ -35,8 +38,12 @@ const Home = () => {
               </ul>
             </Col>
             <Col width="50%">
-              <figure class="dupla">
-                <img src={imagemDupla} alt="Cora e Theo"/>
+              <figure className="dupla">
+                <LazyLoadImage 
+                  src={imagemDupla} 
+                  alt="Cora e Theo" 
+                  width="100%"
+                />
               </figure>
             </Col>
           </Row>
