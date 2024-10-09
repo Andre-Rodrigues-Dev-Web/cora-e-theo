@@ -10,7 +10,7 @@ const Links = () => {
         <Link to={"/sobre-nos"}>Nossa História</Link>
       </li>
       <li>
-        <Link to={"/"}>Ouça nossas músicas</Link>
+        <Link to={"/playlist"}>Ouça nossas músicas</Link>
       </li>
       <li>
         <Link to={"/"}>Confira nossa agenda</Link>

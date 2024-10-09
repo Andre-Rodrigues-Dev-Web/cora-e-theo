@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle, theme } from './shared/providers/style';
-import { Error, Home, Layout, SobreNos } from "./routes";
+import { Error, Home, Layout, SobreNos, Playlist } from "./routes";
+
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="sobre-nos" element={<SobreNos />} />
+          <Route path="playlist" element={<Playlist />} />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>
