@@ -29,7 +29,7 @@ import { tracks } from "./mock";
 import { Col, Container, Row } from "../../shared/components/Grids/style";
 import Seo from "../../shared/components/Seo";
 
-const MusicPlayer = () => {
+const Playlist = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(0);
   const [volume, setVolume] = useState(0.5);
@@ -86,14 +86,6 @@ const MusicPlayer = () => {
     audioRef.current.loop = !isRepeating;
   };
 
-  const handleProgress = () => {
-    const currentTime = audioRef.current.currentTime;
-    const progressPercent = (currentTime / audioRef.current.duration) * 100;
-    setProgress(progressPercent);
-    setCurrentTime(currentTime);
-    setDuration(audioRef.current.duration);
-  };
-
   const selectTrack = (index) => {
     setCurrentTrack(index);
     playMusic();
@@ -107,24 +99,35 @@ const MusicPlayer = () => {
   };
 
   useEffect(() => {
+    const audioElement = audioRef.current; // Salva o valor atual de audioRef.current
+
+    const handleProgress = () => {
+      const currentTime = audioElement.currentTime;
+      const progressPercent = (currentTime / audioElement.duration) * 100;
+      setProgress(progressPercent);
+      setCurrentTime(currentTime);
+      setDuration(audioElement.duration);
+    };
+
+    audioElement.addEventListener("timeupdate", handleProgress);
+
+    return () => {
+      audioElement.removeEventListener("timeupdate", handleProgress); // Remove o listener corretamente
+    };
+  }, []);
+
+  useEffect(() => {
     audioRef.current.load();
     if (isPlaying) {
       playMusic();
     }
-  }, [currentTrack]);
-
-  useEffect(() => {
-    audioRef.current.addEventListener("timeupdate", handleProgress);
-    return () => {
-      audioRef.current.removeEventListener("timeupdate", handleProgress);
-    };
-  }, []);
+  }, [currentTrack, isPlaying]); // Agora incluímos `isPlaying` como dependência
 
   return (
     <MusicPlayerContainer>
       <Seo
         titleSite="Ouça agora a playlist de Cora & Theo"
-        descriptionSite="Confira diversas musicas com as vozes de Cora e Theo, musicas de composições próprias e regravações de sucessos."
+        descriptionSite="Confira diversas músicas com as vozes de Cora e Theo, músicas de composições próprias e regravações de sucessos."
         imageSite="https://coraetheo.com.br/logo512.png"
         urlSite="https://coraetheo.com.br/playlist"
       />
@@ -141,11 +144,11 @@ const MusicPlayer = () => {
               </p>
               <p>
                 Com um repertório que mistura hits contagiantes, baladas
-                emocionantes, modas sertanejas e musicas inéditas, a playlist de
+                emocionantes, modas sertanejas e músicas inéditas, a playlist de
                 Cora e Theo foi criada especialmente para quem gosta de viver a
                 experiência completa da nossa música. Quer dançar, cantar junto
-                ou apenas relaxar? Esta é playlist perfeita para você! Aumente o
-                som e curta nossos sucessos.
+                ou apenas relaxar? Esta é a playlist perfeita para você! Aumente
+                o som e curta nossos sucessos.
               </p>
             </TextContainer>
           </Col>
@@ -261,4 +264,4 @@ const MusicPlayer = () => {
   );
 };
 
-export default MusicPlayer;
+export default Playlist;
