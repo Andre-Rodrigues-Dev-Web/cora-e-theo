@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaSoundcloud, FaYoutube } from "react-icons/fa";
 import {
   FooterContainer,
   FooterLink,
@@ -12,16 +12,16 @@ const Footer = () => {
   return (
     <FooterContainer>
       <div className="container mx-auto text-center">
-        <p>&copy; 2023 My Website. Todos os direitos reservados.</p>
+        <p>&copy; 2023 Cora & Theo. Todos os direitos reservados.</p>
         <SocialIconsContainer aria-label="Links de redes sociais"> 
-          <FooterLink href="/facebook" target="_blank" aria-label="Facebook">
+          <FooterLink href="https://www.instagram.com/coraetheo/" target="_blank" aria-label="Facebook">
             <SocialIcon>
               <FaFacebook />
             </SocialIcon>
           </FooterLink>
-          <FooterLink href="/youtube" target="_blank" aria-label="Youtube">
+          <FooterLink href="https://soundcloud.com/cora-e-theo-victor?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" aria-label="Youtube">
             <SocialIcon>
-              <FaYoutube />
+              <FaSoundcloud />
             </SocialIcon>
           </FooterLink>
           <FooterLink href="https://www.instagram.com/coraetheo/" target="_blank" aria-label="Instagram">
